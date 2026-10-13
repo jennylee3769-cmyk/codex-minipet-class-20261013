@@ -1,0 +1,17 @@
+/* 기존 무대 디자인 유지. 상태 안내·강사 제어·로그인만 추가. */
+[hidden]{display:none!important}
+.fb-banner{position:fixed;top:0;left:0;right:0;z-index:300;background:#111;color:#fff;text-align:center;padding:6px 10px;font:700 12px/1.4 'Pretendard Variable',sans-serif}
+.fb-tools{display:flex;align-items:center;gap:6px}
+#fbStatus{font-size:12px;white-space:nowrap;color:#ddd}
+#nav button[aria-pressed="true"]{background:#fff;color:#111}
+.fb-login{position:fixed;inset:0;z-index:700;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.8);padding:16px}
+.fb-login form{width:min(360px,100%);display:flex;flex-direction:column;gap:12px;background:#fff;color:#111;border-radius:14px;padding:24px}
+.fb-login h2{font-size:22px}
+.fb-login label{display:flex;flex-direction:column;gap:5px;font-size:15px;font-weight:700}
+.fb-login input{font:inherit;padding:10px;min-height:44px;border:1px solid #aaa;border-radius:8px}
+.fb-login button{font:inherit;min-height:44px;border-radius:8px;border:1px solid #aaa;padding:8px 12px;cursor:pointer}
+.fb-login .primary{background:#111;color:#fff}
+.fb-login .row{display:flex;gap:8px}
+#fbError{color:#b71c1c;font-size:14px;min-height:1.2em}
+@media(max-width:760px){#fbStatus{display:none}.fb-tools{gap:4px}#nav{gap:4px;padding:0 6px}#nav button,#nav a{padding:0 8px;flex-shrink:0}#counter{min-width:4em}.fb-banner{font-size:11px}html.fb-admin{--nav-h:112px}html.fb-admin #nav{flex-wrap:wrap;justify-content:center;padding:4px 6px}html.fb-admin #nav .grow{display:none}html.fb-admin .fb-tools{width:100%;justify-content:center}}
+@media print{.fb-banner,.fb-tools,.fb-login{display:none!important}html.no-pdf #stage{display:none!important}html.no-pdf body::before{content:'PDF 저장 OFF · 강사 확인';display:block;padding:2rem;font:700 16pt sans-serif}}
